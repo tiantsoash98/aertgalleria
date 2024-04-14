@@ -1,0 +1,164 @@
+// Breakpoints
+$breakpoints:(
+    ultra-large: 1920px,
+    extra-large: 1440px,
+    large: 1280px,
+    medium: 991px, // tablet
+    small: 767px, // mobile landscape
+    extra-small: 576px, // mobile portrait
+    tiny: 320px, // tiny screens
+);
+
+:root {
+    // Font
+    --font-family-primary: 'Neue Montreal', 'Arial', sans-serif;
+
+    // Typography
+    // lh : Line height
+    // ls : Letter spacing
+    --base-font-size: 16px;
+    --title-h1: 2.22rem;
+    --title-h1-lh: 1.1;
+    --title-h1-ls: -0.02em; 
+    --title-h2: 2rem; 
+    --title-h2-lh: 1.1;
+    --title-h2-ls: -0.015em;
+    --title-h3: 1.6rem; 
+    --title-h3-lh: 1.1;
+    --title-h3-ls: -0.01em;
+    --title-h4: 1.3rem; 
+    --title-h4-lh: 1.3;
+    --title-h4-ls: 0;
+    --title-h5: 1.2rem; 
+    --title-h5-lh: 1.4;
+    --title-h5-ls: 0; 
+    --title-h6: 1.1rem;
+    --title-h6-lh: 1.4;
+    --title-h6-ls: 0; 
+    --paragraph-text: 1.1rem;
+    --paragraph-text-lh: 1.4;
+    --paragraph-text-ls: 0;
+    --callout-text: 0.88rem;
+    --callout-text-lh: 1.5;
+    --callout-text-ls: 0;
+    --footnote-text: 0.8rem;
+    --footnote-text-lh: 1.5;
+    --footnote-text-ls: 0;
+
+    // Colors
+    --color-neutral-0: #ffffff;
+    --color-neutral-50: #F3F3F3;
+    --color-neutral-100: #E7E7E7;
+    --color-neutral-150: #DBDBDB;
+    --color-neutral-200: #D0D0D0;
+    --color-neutral-300: #B8B8B8;
+    --color-neutral-400: #A0A0A0;
+    --color-neutral-500: #898989;
+    --color-neutral-600: #717171;
+    --color-neutral-700: #595959;
+    --color-neutral-800: #414141;
+    --color-neutral-900: #2A2A2A;
+    --color-neutral-950: #121212;
+    --color-neutral-950-rgb: 18, 18, 18;
+    --color-earth: #ff5300;
+
+    // Spacing
+    --spacing-0: 0rem;
+    --spacing-1: 0.25rem;
+    --spacing-2: 0.5rem;
+    --spacing-3: 0.75rem;
+    --spacing-4: 1rem;
+    --spacing-5: 1.25rem;
+    --spacing-6: 1.5rem;
+    --spacing-7: 1.75rem;
+    --spacing-8: 2rem;
+    --spacing-9: 2.25rem;
+    --spacing-10: 2.5rem;
+    --spacing-11: 2.75rem;
+    --spacing-12: 3rem;
+    --spacing-13: 3.25rem;
+    --spacing-14: 3.5rem;
+    --spacing-15: 3.75rem;
+    --spacing-16: 4rem; // 64px
+    --spacing-17: 4.25rem;
+    --spacing-18: 4.5rem;
+    --spacing-19: 4.75rem;
+    --spacing-20: 5rem; // 80px
+    --spacing-30: 7.5rem; // 120px
+    --spacing-40: 10rem; // 160px
+    --spacing-50: 12.5rem; // 200px
+    --spacing-60: 15rem; // 240px
+    --spacing-64: 16rem; // 264px
+    --spacing-96: 24rem;
+    --spacing-128: 32rem;
+
+    // Layout
+    --container-max-width: 100%;
+    --grid-columns: 6;
+    --column-gap: var(--spacing-4);
+    --container-horizontal-padding: var(--spacing-4);
+    --section-vertical-padding: var(--spacing-20);
+
+    // Z-index
+    --z-index-loader: 1000;
+    --z-index-nav: 100;
+    --z-index-transition: 95;
+    --z-index-menu: 90;
+
+    // Easing
+    --default-animation-duration: 0.7s;
+    --default-ease: '0.68, 0.03, 0.14, 0.94';
+    --alias-default-ease: cubic-bezier(0.68, 0.03, 0.14, 0.94);
+
+    // Navbar 
+    --default-show-nav-menu-breakpoint: 991px;
+
+    // Custom variables
+    --ellipse-field-height: 80vh;
+    --featured-works-item-img-height: 60lvh;
+}
+
+// md
+@media screen and (min-width: 992px) {
+    :root {
+        --grid-columns: 12;
+        --container-horizontal-padding: var(--spacing-12);
+                
+        --title-h1: 3.3rem;
+        --title-h2: 2.6rem;
+        --title-h3: 2.2rem;
+        --title-h4: 1.8rem;
+        --title-h5: 1.55rem;
+        --title-h6: 1.33rem;
+        --paragraph-text: 1.15rem;
+        --callout-text: 0.9rem;
+        --footnote-text: 0.88rem;  
+
+        --ellipse-field-height: 100vh;
+    }
+}
+
+// lg
+@media screen and (min-width: 1281px) {
+    :root {
+        --container-horizontal-padding: var(--spacing-16);
+        --section-vertical-padding: var(--spacing-40);
+        --base-font-size: 18px;
+    }
+}
+
+// xl
+@media screen and (min-width: 1441px) {
+    :root {
+        --container-horizontal-padding: var(--spacing-20);
+        --section-vertical-padding: var(--spacing-50);
+        
+        --title-h1: 4.7rem;
+        --title-h2: 3.9rem;
+        --title-h3: 3.1rem;
+        --title-h4: 2.44rem;
+        --title-h5: 1.77rem;
+
+        --featured-works-item-img-height: 80lvh;
+    }
+}

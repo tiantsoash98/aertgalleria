@@ -1,0 +1,50 @@
+.button{
+    $root:&;
+    --button-bg-color: var(--color-neutral-100);
+    --button-text-color: var(--color-neutral-950);
+    --button-icon-size: calc(var(--callout-text) - 0.05rem);
+    --button-border-radius: var(--spacing-20);
+    --button-padding: var(--spacing-4) var(--spacing-8);
+    --button-small-padding: var(--spacing-4) var(--spacing-8);
+    color: var(--button-text-color);
+    cursor: pointer;
+    border-radius: var(--button-border-radius);
+    padding: var(--button-padding);
+
+    &--small {
+        font-size: var(--callout-text);
+        padding: var(--button-small-padding);
+    }
+    &--secondary {
+        --button-bg-color: var(--color-neutral-900);
+        --button-text-color: var(--color-neutral-100);
+    }
+    &--tertiary {
+        --button-bg-color: transparent;
+        --button-text-color: var(--color-neutral-100);
+    }
+    &:hover {
+        #{$root}__frame  {
+            transform: scale(1.05);
+        }
+    }
+    &__frame {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%; 
+        background-color: var(--button-bg-color);
+        border-radius: var(--button-border-radius);
+        transition: transform var(--default-animation-duration) var(--alias-default-ease); 
+    }
+    &__content-wrapper {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: var(--spacing-4);
+    }
+    &__icon {
+        width: var(--button-icon-size);
+    }
+}

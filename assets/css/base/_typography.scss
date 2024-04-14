@@ -1,0 +1,157 @@
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url(/fonts/PPNeueMontreal-Regular.woff2) format("woff2"),
+        url(/fonts/PPNeueMontreal-Regular.woff) format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap
+}
+
+@font-face {
+    font-family: 'Neue Montreal';
+    src: url(/fonts/PPNeueMontreal-Medium.woff2) format("woff2"),
+        url(/fonts/PPNeueMontreal-Medium.woff2) format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap
+}
+
+// Typography
+@mixin h1 {
+    font-family: var(--font-family-primary);
+    font-size: var(--title-h1);
+    line-height: var(--title-h1-lh);
+    letter-spacing: var(--title-h1-ls);
+    font-weight: 400;
+}
+@mixin h2 {
+    font-family: var(--font-family-primary);
+    font-size: var(--title-h2);
+    line-height: var(--title-h2-lh);
+    letter-spacing: var(--title-h2-ls);
+    font-weight: 400;
+}
+@mixin h3 {
+    font-family: var(--font-family-primary);
+    font-size: var(--title-h3);
+    line-height: var(--title-h3-lh);
+    letter-spacing: var(--title-h3-ls);
+    font-weight: 400;
+}
+@mixin h4 {
+    font-family: var(--font-family-primary);
+    font-size: var(--title-h4);
+    line-height: var(--title-h4-lh);
+    letter-spacing: var(--title-h4-ls);
+    font-weight: 400;
+}
+@mixin h5 {
+    font-family: var(--font-family-primary);
+    font-size: var(--title-h5);
+    line-height: var(--title-h5-lh);
+    letter-spacing: var(--title-h5-ls);
+    font-weight: 400;
+}
+
+@mixin h6 {
+    font-family: var(--font-family-primary);
+    font-size: var(--title-h6);
+    line-height: var(--title-h6-lh);
+    letter-spacing: var(--title-h6-ls);
+    font-weight: 400;
+}
+@mixin p {  
+    font-family: var(--font-family-primary);
+    font-size: var(--paragraph-text);
+    line-height: var(--paragraph-text-lh);
+    letter-spacing: var(--paragraph-text-ls);
+    font-weight: 400;
+}
+@mixin callout-text {
+    font-family: var(--font-family-primary);
+    font-size: var(--callout-text);
+    letter-spacing: var(--callout-text-ls);
+    line-height: var(--callout-text-lh);
+    font-weight: 400;
+}
+@mixin footnote-text {
+    font-family: var(--font-family-primary);
+    font-size: var(--footnote-text);
+    line-height: var(--footnote-text-lh);
+    letter-spacing: var(--footnote-text-ls);
+    font-weight: 400;
+}
+
+// Classes
+.font {
+    &-neue-montreal {
+        font-family: 'Neue Montreal';
+    }
+    &-regular {
+        font-weight: 400;
+    }
+    &-medium {
+        font-weight: 500;
+    }
+    &-semi-bold {
+        font-weight: 600;
+    }
+    &-bold {
+        font-weight: 700;
+    }
+}
+
+html {
+    font-size: var(--base-font-size);
+}
+body {
+    @include p;
+}
+h1 {
+    @include h1
+}
+h2 {
+    @include h2
+}
+h3 {
+    @include h3
+}
+h4 {
+    @include h4
+}
+h5 {
+    @include h5
+}
+h6 {
+    @include h6
+}
+p {
+    @include p
+}
+.title-h1 {
+    @include h1;
+}
+.title-h2 {
+    @include h2;
+}
+.title-h3 {
+    @include h3;
+}
+.title-h4 {
+    @include h4;
+}
+.title-h5 {
+    @include h5;
+}
+.title-h6 {
+    @include h6;
+}
+.paragraph-text {
+    @include p;
+}
+.callout-text {
+    @include callout-text;
+}
+.footnote-text {
+    @include footnote-text;
+}
