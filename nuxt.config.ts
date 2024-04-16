@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   app: {
     pageTransition: { name: 'page', mode: 'out-in' },
     head: {
@@ -20,6 +20,7 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.scss'],
   modules: [
     '@nuxt/image',
+    '@nuxt/content',
   ],
   build: {
     transpile: ['gsap'],

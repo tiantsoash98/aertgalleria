@@ -1,7 +1,8 @@
 <template>
-    <div>
-        <h1>Aertgalleria</h1>
-    </div>
+    <main class="page mt-24" id="top">
+        <ContentDoc>
+        </ContentDoc>
+    </main>
 </template>
 
 <script setup>
@@ -10,6 +11,7 @@ const { init, destroy } = useInitScript()
 useHead({
     title: 'Aertgalleria',
 })
+
 
 onMounted(() => {
     init()
